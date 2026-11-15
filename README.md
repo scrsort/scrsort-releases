@@ -16,6 +16,13 @@ Current builds are not yet notarized by Apple, so macOS blocks the first launch.
 Open **System Settings › Privacy & Security**, scroll to the message about scrsort and
 click **Open Anyway**. You only need to do this once per version.
 
+Comfortable with Terminal? After moving scrsort to Applications, this line does the same
+for scrsort only:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/Scrsort.app
+```
+
 scrsort asks for two permissions when they are first needed: access to your screenshot folder
 (to import new screenshots) and Screen Recording (to capture). Nothing leaves your Mac unless
 you choose to share a screenshot.
